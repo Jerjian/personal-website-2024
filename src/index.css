@@ -1,7 +1,15 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #d7dadc;
+  --accent-color: #66d9ef;
+  transition: 0.5s ease-in-out;
+}
+.light-mode {
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --accent-color: #007bff;
+  transition: 0.5s ease-in-out;
+}
 
 html,
 body,
