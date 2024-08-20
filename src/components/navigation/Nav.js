@@ -34,14 +34,15 @@ function Logo() {
 }
 
 function NavLinks() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  //Reset isMobileMenuOpen state when window width is greater than 720
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
       if (window.innerWidth > 720) {
-        setIsMobileMenuOpen(true);
+        setIsMobileMenuOpen(false);
       }
     };
 
@@ -70,16 +71,16 @@ function NavLinks() {
       </ul>
 
       {isMobileMenuOpen ? (
-        <AiOutlineMenu
+        <AiOutlineClose
           onClick={() => setIsMobileMenuOpen(false)}
           className="mobile-btn"
-          size={25}
+          size={20}
         />
       ) : (
-        <AiOutlineClose
+        <AiOutlineMenu
           onClick={() => setIsMobileMenuOpen(true)}
           className="mobile-btn"
-          size={25}
+          size={20}
         />
       )}
     </div>
