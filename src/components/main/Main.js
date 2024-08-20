@@ -1,10 +1,11 @@
 //import css
 import "./Main.css";
+import ProfileHeader from "./ProfileHeader";
 
-export default function Main() {
+export default function Main({ theme }) {
   return (
     <div className="main">
-      <h2 style={{ height: "1000px" }}>Main</h2>
+      <ProfileHeader theme={theme} />
     </div>
-  );
+  ); 
 }

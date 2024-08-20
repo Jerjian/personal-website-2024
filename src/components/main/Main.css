@@ -4,3 +4,92 @@
   align-items: center;
   justify-content: center;
 }
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-header-upper-half {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative; /*This allows absolute positioning within the container */
+}
+
+.profile-picture {
+  border-radius: 50%;
+  height: 10rem;
+}
+.about-me-button {
+  position: absolute;
+  right: -10rem; /* Adjust this value to position the button as needed */
+}
+.profile-picture,
+.about-me-button {
+  margin-top: 2rem;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.introductory-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  padding: 2rem;
+  & * {
+    margin: 0.25rem;
+    line-height: 1.2;
+    font-size: 2.5rem;
+  }
+}
+
+.introductory-heading-1,
+.introductory-heading-2 {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+
+  & span {
+    color: #1976d2;
+    font-weight: 400;
+  }
+}
+.introductory-heading-1 {
+  animation-name: slideInLeft;
+}
+.introductory-heading-2 {
+  animation-name: slideInRight;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .profile-header-upper-half {
+    flex-direction: column;
+    justify-content: center; /* Add this line */
+    position: static; /* Remove absolute positioning for the mobile view */
+  }
+  .about-me-button {
+    position: static;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+}
