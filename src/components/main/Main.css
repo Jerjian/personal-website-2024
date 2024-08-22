@@ -7,6 +7,7 @@
 
 .main {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
@@ -121,6 +122,10 @@
 .slideInRightPfp-animation {
   animation: slideInRightPfp 1s ease-in-out forwards;
   animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+}
+
+.view-my-work-button {
+  margin: 1rem;
 }
 
 @keyframes slideInLeft {

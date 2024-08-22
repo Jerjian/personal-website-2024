@@ -1,0 +1,14 @@
+.work-card {
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  margin: 2rem auto;
+  flex: 1;
+  cursor: pointer;
+}
+.work-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s;
+}

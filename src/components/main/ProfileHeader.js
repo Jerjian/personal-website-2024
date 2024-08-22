@@ -30,6 +30,9 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
     setIsAboutMeToggled(false);
     setIsBackButtonToggled(true);
   }
+  function handleViewMyWork() {
+    console.log("View My Work");
+  }
 
   useEffect(() => {
     if (!isBackButtonToggled) return;
@@ -88,6 +91,17 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
         )}
       </div>
       {!isAboutMeToggled && <IntroductoryText />}
+      <StyledButton
+        isThemeToggled={isThemeToggled}
+        theme={theme}
+        onClick={handleViewMyWork}
+        width={140}
+        height={50}
+        className="view-my-work-button"
+        variant="outlined"
+      >
+        View My Work
+      </StyledButton>
     </div>
   );
 }
@@ -104,18 +118,35 @@ function StyledButton({
   width,
   height,
   className,
+  variant = "contained",
   children,
 }) {
+  const baseStyles = {
+    width: width,
+    height: height,
+  };
+
+  const variantStyles =
+    variant === "outlined"
+      ? {
+          borderColor: isThemeToggled
+            ? theme.palette.primary.darkest
+            : theme.palette.primary.main,
+          borderWidth: 2,
+        }
+      : {
+          backgroundColor: isThemeToggled
+            ? theme.palette.primary.darkest
+            : theme.palette.primary.main,
+        };
+
   return (
     <div className={className} onClick={onClick}>
       <ThemeProvider theme={theme}>
         <Button
-          variant="contained"
-          sx={{
-            bgcolor: isThemeToggled ? "primary.darkest" : "primary.main",
-            width: width,
-            height: height,
-          }}
+          variant={variant}
+          color="primary"
+          sx={{ ...baseStyles, ...variantStyles }}
         >
           {children}
         </Button>
