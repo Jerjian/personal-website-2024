@@ -44,11 +44,6 @@
   display: none;
 }
 @media screen and (max-width: 720px) {
-  /* remove ability to scroll up and down */
-  body {
-    overflow: hidden;
-  }
-
   .theme-toggle-button {
     margin-right: 1.5rem;
   }

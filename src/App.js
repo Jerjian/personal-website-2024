@@ -24,11 +24,10 @@ function App() {
         isThemeToggled={isThemeToggled}
         setIsThemeToggle={setIsThemeToggle}
       />
-      <Main theme={theme} />
+      <Main isThemeToggled={isThemeToggled} theme={theme} />
     </div>
   );
 }
 
 export default App;
-
 

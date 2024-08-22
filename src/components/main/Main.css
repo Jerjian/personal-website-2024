@@ -1,10 +1,17 @@
+:root {
+  --profile-picture-init-border-radius: 50%;
+  --profile-picture-init-height: 10rem;
+  --profile-picture-final-border-radius: 10%;
+  --profile-picture-final-height: 15rem;
+}
+
 .main {
   display: flex;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
 }
-
+/* Profile Header */
 .profile-header {
   display: flex;
   flex-direction: column;
@@ -13,24 +20,50 @@
 .profile-header-upper-half {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  position: relative; /*This allows absolute positioning within the container */
+  position: relative;
+  margin-top: 1rem;
+}
+.profile-header-upper-half.active {
+  padding: 0 10%;
+  gap: 5rem;
 }
 
 .profile-picture {
-  border-radius: 50%;
-  height: 10rem;
+  border-radius: var(--profile-picture-init-border-radius);
+  height: var(--profile-picture-init-height);
 }
+
 .about-me-button {
   position: absolute;
-  right: -10rem; /* Adjust this value to position the button as needed */
+  right: -10rem;
 }
-.profile-picture,
-.about-me-button {
-  margin-top: 2rem;
-  animation: fadeIn 1.5s ease-in-out forwards;
+
+/* About Me Section */
+.about-me-card {
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  margin: 2rem auto;
 }
+
+.about-me-card h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.detailed-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.back-button {
+  margin-bottom: 1rem;
+}
+/* Introductory Text Section */
 
 .introductory-text {
   display: flex;
@@ -52,16 +85,44 @@
   animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
 
   & span {
-    color: #1976d2;
+    color: var(--accent-color);
     font-weight: 400;
   }
 }
+
+.introductory-heading-1.active,
+.introductory-heading-2.active {
+  animation-fill-mode: forwards;
+}
+
 .introductory-heading-1 {
   animation-name: slideInLeft;
 }
 .introductory-heading-2 {
   animation-name: slideInRight;
 }
+
+/* Animations */
+.about-me-card {
+  animation-duration: 1s;
+  animation-name: slideInRight;
+}
+
+.fadeIn-animation {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+.fadeOut-animation {
+  animation: fadeOut 1.5s ease-in-out forwards;
+}
+.slideInRight-animation {
+  animation: slideInRight 1s ease-in-out forwards;
+  animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+}
+.slideInRightPfp-animation {
+  animation: slideInRightPfp 1s ease-in-out forwards;
+  animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+}
+
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
@@ -78,12 +139,28 @@
     transform: translateX(0);
   }
 }
+@keyframes slideInRightPfp {
+  0% {
+    transform: translateX(20rem) translateY(-10rem);
+    border-radius: var(--profile-picture-init-border-radius);
+    height: var(--profile-picture-init-height);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    border-radius: var(--profile-picture-final-border-radius);
+    height: var(--profile-picture-final-height);
+  }
+}
 
 @media screen and (max-width: 720px) {
   .profile-header-upper-half {
     flex-direction: column;
-    justify-content: center; /* Add this line */
-    position: static; /* Remove absolute positioning for the mobile view */
+    justify-content: center;
+    position: static;
+  }
+  .profile-picture {
+    border-radius: var(--profile-picture-init-border-radius);
+    height: var(--profile-picture-init-height);
   }
   .about-me-button {
     position: static;
@@ -91,5 +168,40 @@
     align-items: center;
     margin-top: 2rem;
     margin-right: 0;
+  }
+
+  .profile-header-upper-half.active {
+    padding: 0 2.5rem;
+    gap: 0;
+  }
+
+  /* Animations */
+  .slideInRightPfp-animation,
+  .fadeIn-animation,
+  .fadeOut-animation,
+  .slideInRight-animation {
+    animation: none;
+  }
+}
+
+/* Bellow 720px */
+@media screen and (max-width: 720px) {
+  .about-me-card {
+    margin: 2rem;
+    padding: 1rem;
+    max-width: 30rem;
+    min-width: 10rem;
+  }
+
+  .detailed-text p {
+    text-align: justify;
+  }
+}
+
+/* bellow 860px but above 720px */
+@media screen and (max-width: 860px) {
+  .profile-header-upper-half.active {
+    gap: 1rem;
+    padding: 1rem;
   }
 }
