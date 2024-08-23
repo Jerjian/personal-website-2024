@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "title": "Sword Survivor",
+    "githubLink": "",
+    "deployedLink": "https://itch.io/game/sword-survivor",
+    "description": "A fast-paced action game inspired by Vampire Survivors. Survive 8 intense rounds against diverse enemy types, using strategy and skill to overcome the challenges. Published on itch.io, Sword Survivor is a thrilling experience for fans of action-packed gameplay.",
+    "technologies": ["Unity", "C#", "Animation", "Blender"],
+
+    "keyFeatures": [
+      "Combat System: A responsive and challenging combat system",
+      "Procedurally Generated Levels: 8 rounds of increasing difficulty with diverse enemies.",
+      "Audio and Visuals: Immersive sound effects, music, and detailed graphics."
+    ],
+    "image": "/images/BladeSurvivorImg.png"
+  },
+  {
+    "id": 2,
+    "title": "Big Tech News",
+    "githubLink": "https://github.com/Jerjian/twitterbot",
+    "deployedLink": "https://twitter.com/BigTech_News",
+    "description": "A Twitter bot that aggregates and shares news on big tech companies, providing users with real-time updates and insights on the latest developments in the tech industry.",
+    "technologies": [
+      "Node.js",
+      "NPM",
+      "JavaScript",
+      "Twitter API",
+      "Deployment Technologies (Heroku)"
+    ],
+    "image": "/images/BigTechNews.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Cyclist Map App",
+    "githubLink": "https://github.com/Jerjian/CyclistMapProject",
+    "deployedLink": "https://www.youtube.com/watch?v=hPMkz1TTyvo",
+    "description": "A mobile and web app designed for cyclists to track their progress and stay connected. Featuring a map and calendar, this app allows users to plan and record their rides, and share their achievements with the community.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "EJS",
+      "ExpressJS",
+      "Google API",
+      "Node & NPM",
+      "Restful Routes Integration"
+    ],
+    "image": "/images/CyclistWebApp.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Discord Bot",
+    "githubLink": "",
+    "deployedLink": "",
+    "description": "A fun Discord bot that challenges users to a game of type racing. Test your typing speed and accuracy, compete with friends, and climb the leaderboard to become the ultimate TypeRacer champion!",
+    "technologies": ["Node.js", "Discord API"],
+    "image": "/images/TypeRacerBotImg.png"
+  },
+
+  {
+    "id": 5,
+    "title": "Portfolio Website",
+    "githubLink": "",
+    "deployedLink": "",
+    "description": "A personal website showcasing my skills, experience, and projects. Designed to be accessible on any device, this responsive website adapts to various screen sizes, providing an optimal viewing experience for users whether on mobile, tablet, or desktop.",
+    "technologies": ["React", "JavaScript", "MUI Icons", "Node", "NPM"],
+    "image": "/images/PortfolioWebsite.png"
+  }
+]

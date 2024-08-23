@@ -4,8 +4,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 import { IconButton } from "@mui/material";
 
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-
 export default function ProfileHeader({ isThemeToggled, theme }) {
   const [isAboutMeToggled, setIsAboutMeToggled] = useState(false);
   const [isBackButtonToggled, setIsBackButtonToggled] = useState(false);
@@ -31,7 +29,8 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
     setIsBackButtonToggled(true);
   }
   function handleViewMyWork() {
-    console.log("View My Work");
+    const work = document.querySelector(".work");
+    work.scrollIntoView({ behavior: "smooth" });
   }
 
   useEffect(() => {
@@ -130,13 +129,13 @@ function StyledButton({
     variant === "outlined"
       ? {
           borderColor: isThemeToggled
-            ? theme.palette.primary.darkest
+            ? theme.palette.primary.darker
             : theme.palette.primary.main,
           borderWidth: 2,
         }
       : {
           backgroundColor: isThemeToggled
-            ? theme.palette.primary.darkest
+            ? theme.palette.primary.dark
             : theme.palette.primary.main,
         };
 
@@ -167,12 +166,7 @@ function IntroductoryText() {
 }
 
 function AboutMeCard({ children }) {
-  return (
-    <div className="about-me-card">
-      {/* <h1>About Me</h1> */}
-      {children}
-    </div>
-  );
+  return <div className="about-me-card">{children}</div>;
 }
 
 function DetailedText() {

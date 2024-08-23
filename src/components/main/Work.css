@@ -1,14 +1,43 @@
-.work-card {
-  border-radius: 10px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+.work {
+  max-width: 80%;
+  margin: 2rem auto;
   padding: 2rem;
-  max-width: 700px;
-  width: 100%;
+}
+
+.work-card {
+  padding: 2rem;
+  max-width: 800px;
   margin: 2rem auto;
   flex: 1;
-  cursor: pointer;
 }
-.work-card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s;
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+}
+.work-card-project-description {
+  flex-grow: 1;
+  height: 10rem;
+  overflow-y: auto;
+}
+.work-card-technology {
+  height: 5.5rem;
+}
+.work-card-button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.work-card-button-section-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
 }

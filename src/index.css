@@ -1,13 +1,13 @@
 .dark-mode {
   --background-color: #121212;
   --text-color: #d7dadc;
-  --accent-color: #64b5f6;
+  --accent-color: #1976d2;
   transition: 0.5s ease-in-out;
 }
 .light-mode {
   --background-color: #f0f0f0;
   --text-color: #333;
-  --accent-color: #0d47a1;
+  --accent-color: #2196f3;
   transition: 0.5s ease-in-out;
 }
 
