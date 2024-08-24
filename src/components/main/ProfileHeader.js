@@ -23,7 +23,6 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
     pfpImg.classList.add("slideInRightPfp-animation");
     profileHeaderUpperHalf.classList.add("active");
   }
-
   function handleBackButton() {
     setIsAboutMeToggled(false);
     setIsBackButtonToggled(true);
@@ -75,6 +74,14 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
 
             <h1>About Me</h1>
             <DetailedText />
+            <div className="trancripts">
+              <TranscriptButton theme={theme} isThemeToggled={isThemeToggled}>
+                Computer Science Transcript
+              </TranscriptButton>
+              <TranscriptButton theme={theme} isThemeToggled={isThemeToggled}>
+                Commerce Transcript
+              </TranscriptButton>
+            </div>
           </AboutMeCard>
         ) : (
           <StyledButton
@@ -90,17 +97,30 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
         )}
       </div>
       {!isAboutMeToggled && <IntroductoryText />}
-      <StyledButton
-        isThemeToggled={isThemeToggled}
-        theme={theme}
-        onClick={handleViewMyWork}
-        width={140}
-        height={50}
-        className="view-my-work-button"
-        variant="outlined"
-      >
-        View My Work
-      </StyledButton>
+      <div className="profile-header-lower-half">
+        <StyledButton
+          isThemeToggled={isThemeToggled}
+          theme={theme}
+          onClick={handleViewMyWork}
+          width={140}
+          height={50}
+          className="view-my-work-button"
+          variant="outlined"
+        >
+          View My Work
+        </StyledButton>
+        <StyledButton
+          isThemeToggled={isThemeToggled}
+          theme={theme}
+          onClick={() => alert("not yet implemented")}
+          width={140}
+          height={50}
+          className="view-my-work-button"
+          variant="outlined"
+        >
+          resume
+        </StyledButton>
+      </div>
     </div>
   );
 }
@@ -173,18 +193,34 @@ function DetailedText() {
   return (
     <div className="detailed-text">
       <p>
-        I'm a software developer with a background in finance and accounting,
-        blending business insight with tech expertise. After earning my
-        Bachelor's in Accountancy with a minor in Finance from Concordia
-        University, the COVID-19 pandemic sparked my passion for technology. I
-        became driven to harness the internet's potential for meaningful impact
-        and pursued a second degree in Computer Science. As a full-stack web
-        developer intern at Fix Network, I leveraged the ABP framework, C#,
-        Blazor, and .NET to build robust web applications. My unique blend of
-        business and technical expertise fuels my passion for creating software
-        that's not just functional, but valuable. I'm committed to continuous
-        learning and growth, driven to make a lasting impact through code.
+        I'm a software developer with a background in Accounting and Finance,
+        now dedicated to harnessing technology to drive meaningful impact. I
+        hold two undergraduate degrees from Concordia University, earning both
+        with distinction: a Bachelor's in Commerce (Major in Accountancy and
+        Minor in Finance) and a Bachelor's in Computer Science. With a strong
+        foundation in business and a passion for technology, I create software
+        solutions that are both functional and valuable. As a full-stack web
+        developer intern at Fix Network, I utilized technologies like ABP
+        framework, C#, Blazor, and .NET to build robust web applications. I'm
+        committed to ongoing learning and growth, driven to make a lasting
+        impact through software.
       </p>
     </div>
+  );
+}
+
+function TranscriptButton({ children, isThemeToggled, theme }) {
+  return (
+    <StyledButton
+      isThemeToggled={isThemeToggled}
+      theme={theme}
+      onClick={() => alert("not yet implemented")}
+      width={180}
+      height={50}
+      className="view-my-work-button"
+      variant="outlined"
+    >
+      {children}
+    </StyledButton>
   );
 }

@@ -26,9 +26,25 @@
   position: relative;
   margin-top: 1rem;
 }
+.trancripts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .profile-header-upper-half.active {
   padding: 0 10%;
   gap: 5rem;
+}
+
+.profile-header-lower-half {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
 
 .profile-picture {

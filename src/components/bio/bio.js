@@ -38,7 +38,7 @@ export default function Bio() {
         >
           PRO
         </Chip>
-        <Typography level="title-lg">Josephine Blanton</Typography>
+        <Typography level="title-lg">Christian Jerjian</Typography>
         <Typography level="body-sm" sx={{ maxWidth: "24ch" }}>
           Hello, this is my bio and I am a PRO member of MUI. I am a developer
           and I love to code.

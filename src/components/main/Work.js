@@ -190,14 +190,9 @@ function WorkCard({ project, isThemeToggled, theme }) {
                     variant="outlined"
                     disabled
                     sx={{
-                      color: isThemeToggled
-                        ? theme.palette.primary.darker
-                        : theme.palette.primary.main,
+                      backgroundColor: isThemeToggled ? "#99b3c8" : "#f0f0f0",
                       width: 130,
                       height: 45,
-                      borderColor: isThemeToggled
-                        ? theme.palette.primary.darker
-                        : theme.palette.primary.main,
                       borderWidth: 2,
                     }}
                   >
