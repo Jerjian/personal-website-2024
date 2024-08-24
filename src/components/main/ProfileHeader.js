@@ -173,20 +173,17 @@ function DetailedText() {
   return (
     <div className="detailed-text">
       <p>
-        I am an Accountant turned Software developer! After graduating from the
-        University of Concordia with a Bachelors in Commerce (Major in
-        Accountancy, Minor in Finance), the Covid-19 pandemic just started, and
-        I developed a passion for building products that deliver value. Shortly
-        before pursuing Computer Science, I came across a Chrome Extension
-        called Tab for a Cause. This extension essentially adds unintrusive
-        advertisements to every tab you open. The catch is that the
-        advertisement profits will be donated to any cause you wish! I was, and
-        still am, so enthusiastic about the ability for a single individual to
-        leverage the internet and web apps to deliver value to the world. I
-        wanted to deliver the same kind of tangible value, and my joy for
-        building useful things made me decide to pursue a second degree in
-        Computer Science. I still have a special interest in businesses and
-        investing, which will be demonstrated by some of my projects down below
+        I'm a software developer with a background in finance and accounting,
+        blending business insight with tech expertise. After earning my
+        Bachelor's in Accountancy with a minor in Finance from Concordia
+        University, the COVID-19 pandemic sparked my passion for technology. I
+        became driven to harness the internet's potential for meaningful impact
+        and pursued a second degree in Computer Science. As a full-stack web
+        developer intern at Fix Network, I leveraged the ABP framework, C#,
+        Blazor, and .NET to build robust web applications. My unique blend of
+        business and technical expertise fuels my passion for creating software
+        that's not just functional, but valuable. I'm committed to continuous
+        learning and growth, driven to make a lasting impact through code.
       </p>
     </div>
   );

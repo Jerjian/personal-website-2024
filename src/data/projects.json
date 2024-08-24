@@ -2,8 +2,8 @@
   {
     "id": 1,
     "title": "Sword Survivor",
-    "githubLink": "",
-    "deployedLink": "https://itch.io/game/sword-survivor",
+    "githubLink": "https://github.com/Jerjian/Blade-Survivor",
+    "deployedLink": "https://thisiskhal.itch.io/blade-survivor",
     "description": "A fast-paced action game inspired by Vampire Survivors. Survive 8 intense rounds against diverse enemy types, using strategy and skill to overcome the challenges. Published on itch.io, Sword Survivor is a thrilling experience for fans of action-packed gameplay.",
     "technologies": ["Unity", "C#", "Animation", "Blender"],
 
@@ -50,7 +50,7 @@
   {
     "id": 4,
     "title": "Discord Bot",
-    "githubLink": "",
+    "githubLink": "https://github.com/Jerjian/TypingRaceBot",
     "deployedLink": "",
     "description": "A fun Discord bot that challenges users to a game of type racing. Test your typing speed and accuracy, compete with friends, and climb the leaderboard to become the ultimate TypeRacer champion!",
     "technologies": ["Node.js", "Discord API"],

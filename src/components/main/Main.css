@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin: 3rem auto;
 }
 .profile-header-upper-half {
   display: flex;
