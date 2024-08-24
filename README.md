@@ -19,9 +19,8 @@ CSS3: For custom styles and animations.
 
 ## Backend:
 None for this project, as it’s a static site focused on frontend technologies. However, backend experience includes working with .NET, C#, Blazor, and ABP Framework in other projects.
-Version Control:
 
-## GitHub: 
+## Version Control: GitHub
 All the code for this project is available on GitHub for version control and collaboration.
 
 # Installation & Usage
