@@ -1,7 +1,7 @@
 import Avatar from "@mui/joy/Avatar";
 import Chip from "@mui/joy/Chip";
 import Box from "@mui/joy/Box";
-import Button from "@mui/joy/Button";
+import Button from "@mui/material/Button";
 import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import CardOverflow from "@mui/joy/CardOverflow";
@@ -12,17 +12,27 @@ import Input from "@mui/joy/Input";
 import SvgIcon from "@mui/joy/SvgIcon";
 import ButtonGroup from "@mui/joy/ButtonGroup";
 import { ThemeProvider } from "@mui/material/styles";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Tooltip from "@mui/material/Tooltip";
+
 
 import "./ContactForm.css";
 
 export default function ContactForm({ theme, isThemeToggled }) {
+
+  function handleClick(link) {
+    window.open(link);
+  }
+
   return (
     <Card
+    className="contact-form"
       sx={{
         width: 340,
         maxWidth: "100%",
         boxShadow: "lg",
-      }}
+        }}
     >
       <CardContent sx={{ alignItems: "center", textAlign: "center" }}>
         <Avatar
@@ -57,22 +67,39 @@ export default function ContactForm({ theme, isThemeToggled }) {
           <Input placeholder="Your Name" fullWidth />
           <Input placeholder="Your Email" fullWidth />
           <Input placeholder="Your Message" fullWidth multiline rows={4} />
-          <Button variant="contained" color="primary">
+          <Button variant="contained"
+          sx={{ backgroundColor: isThemeToggled
+            ? theme.palette.primary.dark
+            : theme.palette.primary.main }}>
             Send Message
           </Button>
         </Box>
       </CardContent>
-      <CardOverflow sx={{ bgcolor: "background.level1" }}>
-        <CardActions buttonFlex="1">
-          <ButtonGroup
-            variant="outlined"
-            sx={{ bgcolor: "background.surface" }}
-          >
-            <Button>Message</Button>
-            <Button>Connect</Button>
-          </ButtonGroup>
-        </CardActions>
-      </CardOverflow>
+      <CardActions className="card-actions">
+        <Tooltip title="Open my GitHub">
+          <GitHubIcon
+            onClick={() => handleClick("https://github.com/Jerjian")}
+            sx={{
+              fontSize: 20,
+              color: isThemeToggled ? "#FFFFFF" : "#171515",
+              cursor: "pointer",
+            }}
+          />
+        </Tooltip>
+
+        <Tooltip title="Open my LinkedIn">
+          <LinkedInIcon
+            onClick={() => handleClick("https://www.linkedin.com/in/christianjerjian/")}
+            sx={{
+              fontSize: 20,
+              color: isThemeToggled ? "#FFFFFF" : "#171515",
+              cursor: "pointer",
+            }}
+          />
+        </Tooltip>
+      </CardActions>
+
     </Card>
   );
 }
+

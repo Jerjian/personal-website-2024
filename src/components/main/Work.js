@@ -20,9 +20,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Work({ theme, isThemeToggled }) {
-  //   backgroundColor: isThemeToggled
-  // ? theme.palette.primary.dark
-  // : theme.palette.primary.main,
+
 
   const [projects, setProjects] = useState(projectsData);
   const projectsCards = projects.map((project) => (

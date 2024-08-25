@@ -164,7 +164,6 @@ function StyledButton({
       <ThemeProvider theme={theme}>
         <Button
           variant={variant}
-          color="primary"
           sx={{ ...baseStyles, ...variantStyles }}
         >
           {children}

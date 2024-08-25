@@ -1,4 +1,15 @@
-.bio {
+.contact-form{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 4rem;
+  background-color: var(--card-background-color) !important;
+  padding: 1rem !important;
+  min-width: 300px;
+  padding: 2rem;
+  margin: 4rem auto;
+
+}
+.card-actions{
+  display: flex;
+  justify-content: center;
+  gap: 8rem !important;
+  margin:1rem ;
 }
