@@ -52,8 +52,8 @@ export default function ContactForm({ theme, isThemeToggled }) {
         >
           Montreal, Canada
         </Chip>
-        <Typography level="title-lg">Christian Jerjian</Typography>
-        <Typography level="body-sm" sx={{ maxWidth: "24ch" }}>
+        <Typography className="contact-form-name" level="title-lg">Christian Jerjian</Typography>
+        <Typography className="contact-form-description" level="body-sm" sx={{ maxWidth: "24ch" }}>
           Contact me at christianjerjian@gmail.com or use the form below.
         </Typography>
         <Box
