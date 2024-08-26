@@ -61,7 +61,7 @@
     "id": 5,
     "title": "Portfolio Website",
     "githubLink": "https://github.com/Jerjian/personal-website-2024.git",
-    "deployedLink": "",
+    "deployedLink": "https://personal-website-2024-tau.vercel.app/",
     "description": "A personal website showcasing my skills, experience, and projects. Designed to be accessible on any device, this responsive website adapts to various screen sizes, providing an optimal viewing experience for users whether on mobile, tablet, or desktop.",
     "technologies": ["React", "JavaScript", "MUI Icons", "Node", "NPM"],
     "image": "/images/PortfolioWebsite.png"
