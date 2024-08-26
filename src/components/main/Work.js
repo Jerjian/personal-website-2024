@@ -108,7 +108,6 @@ function WorkCard({ project, isThemeToggled, theme }) {
         <AspectRatio ratio="2">
           <img
             src={project.image}
-            srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
             alt={project.title + " image"}
           />
         </AspectRatio>

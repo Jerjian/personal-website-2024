@@ -74,14 +74,6 @@
   margin-top: 1rem;
 }
 
-/* .work-card-button-section-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-} */
-
 /* Carousel customization */
 .react-multi-carousel-item {
   display: flex;
