@@ -53,17 +53,38 @@ function NavLinks() {
     };
   }, []);
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false); // Close mobile menu after clicking
+  };
+
   return (
     <div className="NavLinks">
       <ul className={`navlinks-menu ${isMobileMenuOpen ? "active" : ""}`}>
         <li className="NavLinks-item">
-          <a href="/#About">About</a>
+          <a
+            href="/#profile-header"
+            onClick={(e) => handleSmoothScroll(e, "#profile-header")}
+          >
+            About
+          </a>
         </li>
         <li className="NavLinks-item">
-          <a href="/#Work">My Work</a>
+          <a href="/#work" onClick={(e) => handleSmoothScroll(e, "#work")}>
+            My Work
+          </a>
         </li>
         <li className="NavLinks-item">
-          <a href="/#Contact">Contact</a>
+          <a
+            href="/#contact-form"
+            onClick={(e) => handleSmoothScroll(e, "#contact-form")}
+          >
+            Contact
+          </a>
         </li>
       </ul>
 

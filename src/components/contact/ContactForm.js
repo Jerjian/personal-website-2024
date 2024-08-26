@@ -51,7 +51,7 @@ export default function ContactForm({ theme, isThemeToggled }) {
   }
 
   return (
-    <div className="contact-form">
+    <div className="contact-form" id="contact-form">
       <h1>Contact Me</h1>
       <Card
         className="contact-form-card"

@@ -55,7 +55,7 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
   }, []);
 
   return (
-    <div className="profile-header">
+    <div className="profile-header" id="profile-header">
       <div className="profile-header-upper-half">
         <ProfilePicture />
 

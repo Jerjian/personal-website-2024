@@ -31,7 +31,7 @@ export default function Work({ theme, isThemeToggled }) {
   ));
 
   return (
-    <div className="work">
+    <div className="work" id="work">
       <h1>My Work</h1>
       <Carousel
         responsive={{
