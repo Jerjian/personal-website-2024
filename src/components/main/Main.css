@@ -212,11 +212,15 @@
     margin: 2rem;
     padding: 1rem;
     max-width: 30rem;
-    min-width: 10rem;
+    /* min-width: 10rem; */
   }
 
   .detailed-text p {
     text-align: justify;
+  }
+  .trancripts {
+    display: flex;
+    flex-direction: column;
   }
 }
 

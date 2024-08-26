@@ -1,6 +1,6 @@
 /* Work component styles */
 .work {
-  min-width: 400px;
+  /* min-width: 400px; */
   margin: 4rem auto;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
