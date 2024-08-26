@@ -1,11 +1,10 @@
 /* Work component styles */
 .work {
-  max-width: 80%;
   min-width: 400px;
   margin: 4rem auto;
   padding: 2rem;
-  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
 }
 
 .work h1 {

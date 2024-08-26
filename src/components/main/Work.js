@@ -20,8 +20,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Work({ theme, isThemeToggled }) {
-
-
   const [projects, setProjects] = useState(projectsData);
   const projectsCards = projects.map((project) => (
     <WorkCard
@@ -106,10 +104,7 @@ function WorkCard({ project, isThemeToggled, theme }) {
     >
       <CardOverflow>
         <AspectRatio ratio="2">
-          <img
-            src={project.image}
-            alt={project.title + " image"}
-          />
+          <img src={project.image} alt={project.title + " image"} />
         </AspectRatio>
       </CardOverflow>
       <CardContent>

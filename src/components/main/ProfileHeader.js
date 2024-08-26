@@ -162,10 +162,7 @@ function StyledButton({
   return (
     <div className={className} onClick={onClick}>
       <ThemeProvider theme={theme}>
-        <Button
-          variant={variant}
-          sx={{ ...baseStyles, ...variantStyles }}
-        >
+        <Button variant={variant} sx={{ ...baseStyles, ...variantStyles }}>
           {children}
         </Button>
       </ThemeProvider>

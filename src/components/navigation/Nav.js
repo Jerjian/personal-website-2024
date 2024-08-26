@@ -63,9 +63,6 @@ function NavLinks() {
           <a href="/#Work">My Work</a>
         </li>
         <li className="NavLinks-item">
-          <a href="/#Skills">Skills</a>
-        </li>
-        <li className="NavLinks-item">
           <a href="/#Contact">Contact</a>
         </li>
       </ul>

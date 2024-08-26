@@ -1,20 +1,33 @@
-.contact-form{
+.contact-form {
+  min-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: var(--card-background-color) !important;
-  padding: 1rem !important;
-  min-width: 00px;
-  margin: 4rem auto !important;
+  max-width: 80%;
 }
-.card-actions{
+.contact-form h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+.contact-form-card {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--card-background-color) !important;
+  transition: transform 0.3s ease;
+}
+
+.card-actions {
   display: flex;
   justify-content: center;
   gap: 8rem !important;
-  margin:1rem ;
+  margin: 1rem;
 }
 
-.contact-form-name{
+.contact-form-name {
   color: var(--accent-color) !important;
 }
-.contact-form-description{
+.contact-form-description {
   color: var(--card-text-color) !important;
 }
