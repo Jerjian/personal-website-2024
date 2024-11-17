@@ -6,7 +6,7 @@ import { createTheme } from "@mui/material/styles";
 import { blue } from "@mui/material/colors";
 
 function App() {
-  const [isThemeToggled, setIsThemeToggle] = useState(true);
+  const [isThemeToggled, setIsThemeToggle] = useState(false);
   const theme = createTheme({
     palette: {
       primary: {
