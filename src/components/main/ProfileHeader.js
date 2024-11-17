@@ -1,5 +1,7 @@
 import profilePicture from "../../assets/Jerjian_Christian_skype.jpg";
 import Button from "@mui/material/Button";
+import resumePDF from "../../assets/ChristianJerjianResume2024.pdf";
+import transcriptPDF from "../../assets/ConcordiaTranscriptFinal.pdf";
 import { ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 import { IconButton } from "@mui/material";
@@ -76,10 +78,7 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
             <DetailedText />
             <div className="trancripts">
               <TranscriptButton theme={theme} isThemeToggled={isThemeToggled}>
-                Computer Science Transcript
-              </TranscriptButton>
-              <TranscriptButton theme={theme} isThemeToggled={isThemeToggled}>
-                Commerce Transcript
+                Transcript
               </TranscriptButton>
             </div>
           </AboutMeCard>
@@ -112,7 +111,9 @@ export default function ProfileHeader({ isThemeToggled, theme }) {
         <StyledButton
           isThemeToggled={isThemeToggled}
           theme={theme}
-          onClick={() => alert("not yet implemented")}
+          onClick={() => {
+            window.open(resumePDF, "_blank");
+          }}
           width={140}
           height={50}
           className="view-my-work-button"
@@ -210,8 +211,10 @@ function TranscriptButton({ children, isThemeToggled, theme }) {
     <StyledButton
       isThemeToggled={isThemeToggled}
       theme={theme}
-      onClick={() => alert("not yet implemented")}
-      width={180}
+      onClick={() => {
+        window.open(transcriptPDF, "_blank");
+      }}
+      width={150}
       height={50}
       className="view-my-work-button"
       variant="outlined"

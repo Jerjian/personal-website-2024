@@ -15,6 +15,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Tooltip from "@mui/material/Tooltip";
+import profilePicture from "../../assets/Jerjian_Christian_skype.jpg";
 
 import "./ContactForm.css";
 
@@ -62,10 +63,7 @@ export default function ContactForm({ theme, isThemeToggled }) {
         }}
       >
         <CardContent sx={{ alignItems: "center", textAlign: "center" }}>
-          <Avatar
-            src="https://media.licdn.com/dms/image/v2/C4D03AQHoO3hox9JuOQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1592155381792?e=1729728000&v=beta&t=CEMSGJGZxiI_dlu2OHVRZCKjl0IrIg-dPSLsVS7yhb4"
-            sx={{ "--Avatar-size": "4rem" }}
-          />
+          <Avatar src={profilePicture} sx={{ "--Avatar-size": "4rem" }} />
           <Chip
             size="sm"
             variant="soft"
