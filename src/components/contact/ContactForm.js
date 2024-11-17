@@ -24,27 +24,45 @@ import { useState } from "react";
 export default function ContactForm({ theme, isThemeToggled }) {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     message: "",
   });
 
   function handleInputChange(e) {
-    e.preventDefault();
     const name = e.target.name;
     const value = e.target.value;
+    console.log(name, value);
     setFormData((prev) => {
       return { ...prev, [name]: value };
     });
   }
   function handleSubmit(e) {
     e.preventDefault();
-    const { name, email, message } = formData;
+    const { name, message } = formData;
     const subject = `Contact from ${name}`;
     const body = `${message}`;
-    const mailtoLink = `mailto:christianjerjian@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+
+    // // Create the mailto link
+    // const mailtoLink = `mailto:christianjerjian@gmail.com?subject=${encodeURIComponent(
+    //   subject
+    // )}&body=${encodeURIComponent(body)}`;
+
+    // // Try to open mailto link in a new window
+    // const mailWindow = window.open(mailtoLink);
+
+    // // If window.open returns null or undefined, the popup was blocked or failed
+    // if (!mailWindow) {
+    // }
+    const fullMessage = `To: christianjerjian@gmail.com\nSubject: Contact from ${name}\n\nMessage:\n${message}`;
+    navigator.clipboard.writeText(fullMessage);
+    alert(
+      "Unable to open your email client. The message has been copied to your clipboard."
+    );
+
+    // Clear form
+    setFormData({
+      name: "",
+      message: "",
+    });
   }
 
   function handleClick(link) {
@@ -88,7 +106,6 @@ export default function ContactForm({ theme, isThemeToggled }) {
             Contact me at christianjerjian@gmail.com or use the form below.
           </Typography>
           <Box
-            onSubmit={handleSubmit}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -103,14 +120,6 @@ export default function ContactForm({ theme, isThemeToggled }) {
               value={formData.name}
               required
               onChange={(e) => handleInputChange(e)}
-            />
-            <Input
-              placeholder="Your Email"
-              fullWidth
-              name="email"
-              value={formData.email}
-              onChange={(e) => handleInputChange(e)}
-              required
             />
             <Input
               placeholder="Your Message"
